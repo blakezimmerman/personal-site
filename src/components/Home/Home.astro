@@ -1,0 +1,23 @@
+---
+import LinkButton from "../Button/LinkButton.astro";
+import Computer from "./Computer.astro";
+import {
+  graphicContainer,
+  homeContainer,
+  introWithGraphicContainer,
+  resumeButtonWrapper,
+} from "./Home.css";
+import Introduction from "./Introduction.astro";
+---
+
+<section class={homeContainer}>
+  <div class={introWithGraphicContainer}>
+    <Introduction />
+    <div class={graphicContainer}>
+      <Computer />
+    </div>
+  </div>
+  <div class={resumeButtonWrapper}>
+    <LinkButton href="/BlakeZimmermanResume.pdf">View My Resume</LinkButton>
+  </div>
+</section>

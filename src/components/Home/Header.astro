@@ -1,0 +1,12 @@
+---
+import Logo from "../Logo.astro";
+import { header, logo, nav, navItem } from "./Header.css";
+---
+
+<header class={header}>
+  <Logo className={logo} />
+  <nav class={nav}>
+    <a class={navItem} href="#about-me">About Me</a>
+    <a class={navItem} href="https://blog.blakez.dev">Blog</a>
+  </nav>
+</header>

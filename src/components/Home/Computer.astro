@@ -1,0 +1,28 @@
+---
+import { visuallyHide } from "../../styles/helpers.css";
+import { computerContainer, promptCommand, promptPath } from "./Computer.css";
+---
+
+<figure class={computerContainer} role="img" aria-labelledby="computer-caption">
+  <pre>
+      ,-----------------------,
+     +-----------------------+ |
+     |  .-----------------.  | |
+     |  |                 |  | |
+     |  |                 |  | |
+     |  |  <pre class={promptPath}>~/users/Blake</pre>  |  | |
+     |  |  <pre class={promptCommand}>-&gt; ./welcome</pre>   |  | |/-----
+     |  |                 |  | |   //
+     |  `-----------------'  |,"  //
+     +-----------------------+   // 
+              |_\_/_|           //
+   ____________________________//__
+  / xooooooooooooooo== .o.  oooo /,
+ / ==ooooooooooooooo==.o.  ooo= //
+/_==__==========__==_ooo__ooo=_/'
+`-----------------------------'
+  </pre>
+  <figcaption class={visuallyHide} id="computer-caption">
+    ASCII art of a computer
+  </figcaption>
+</figure>

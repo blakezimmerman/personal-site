@@ -1,0 +1,46 @@
+---
+import { lightThemeClass, darkThemeClass } from "../styles/theme.css";
+import "../styles/global.css";
+
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/700.css";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class={lightThemeClass}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+<script define:vars={{ darkThemeClass }}>
+  function applyColorScheme(colorScheme) {
+    document.documentElement.style.setProperty("color-scheme", colorScheme);
+    if (colorScheme === "dark") document.documentElement.classList.add(darkThemeClass);
+    else document.documentElement.classList.remove(darkThemeClass);
+  }
+
+  // Apply initial color scheme
+  const mql = window.matchMedia("(prefers-color-scheme: dark)");
+  applyColorScheme(mql.matches ? "dark" : "light");
+
+  // Listen for color scheme changes
+  mql.addEventListener("change", (e) => {
+    const newColorScheme = e.matches ? "dark" : "light";
+    applyColorScheme(newColorScheme);
+  });
+</script>

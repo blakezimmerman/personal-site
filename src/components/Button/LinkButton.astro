@@ -1,0 +1,13 @@
+---
+import { linkButton } from "./Button.css";
+
+export interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a class={linkButton} href={href}>
+  <slot />
+</a>

@@ -1,0 +1,33 @@
+{
+  "name": "@blakezimmerman/personal-site",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint 'src/**/*.{astro,js,jsx,ts,tsx}' --cache",
+    "prettier:check": "prettier --check 'src/**/*.{astro,js,jsx,ts,tsx}'",
+    "prettier:fix": "prettier --write 'src/**/*.{astro,js,jsx,ts,tsx}'"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "^4.5.10",
+    "@vanilla-extract/css": "^1.9.5",
+    "@vanilla-extract/sprinkles": "^1.5.1",
+    "astro": "^2.0.10"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "@vanilla-extract/vite-plugin": "^3.8.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.8.0",
+    "typescript": "^4.9.5"
+  }
+}
