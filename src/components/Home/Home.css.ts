@@ -1,6 +1,7 @@
 import { style } from "@vanilla-extract/css";
 import { minFullHeight } from "../../styles/helpers.css";
 import { responsiveStyle } from "../../styles/responsiveStyle";
+import { fontSizes, spaces } from "../../styles/scales";
 import { sprinkles } from "../../styles/sprinkles.css";
 
 export const homeContainer = style([
@@ -12,11 +13,11 @@ export const homeContainer = style([
   }),
   minFullHeight,
   {
-    paddingTop: "57px", // Height of header
+    paddingTop: `calc(${spaces[16]} + ${spaces[16]} + ${fontSizes[24]})`, // Height of header
   },
   responsiveStyle({
     tablet: {
-      paddingTop: "96px", // Height of header
+      paddingTop: `calc(${spaces[32]} + ${spaces[32]} + ${fontSizes[32]})`, // Height of header
     },
   }),
 ]);

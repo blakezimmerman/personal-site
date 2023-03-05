@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+import { sprinkles } from "./sprinkles.css";
 
 export const visuallyHide = style({
   border: 0,
@@ -17,3 +18,8 @@ export const minFullHeight = style({
     "(-webkit-touch-callout: none)": { minHeight: "-web-fill-available" },
   },
 });
+
+export const translucentSuface = style([
+  sprinkles({ bg: "surfaceTranslucent" }),
+  { backdropFilter: "blur(12px)" },
+]);
