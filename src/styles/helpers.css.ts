@@ -13,13 +13,13 @@ export const visuallyHide = style({
 });
 
 export const minFullHeight = style({
-  minHeight: "100vh",
-  "@supports": {
-    "(-webkit-touch-callout: none)": { minHeight: "-web-fill-available" },
-  },
+  minHeight: ["100vh", "100svh"],
 });
 
 export const translucentSuface = style([
   sprinkles({ bg: "surfaceTranslucent" }),
-  { backdropFilter: "blur(12px)" },
+  {
+    backdropFilter: "blur(12px)",
+    WebkitBackdropFilter: "blur(12px)",
+  },
 ]);
