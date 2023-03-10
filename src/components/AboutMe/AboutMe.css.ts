@@ -9,7 +9,7 @@ export const aboutMeContainer = style([
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    p: 32,
+    p: 24,
     gap: 48,
   }),
   paddingForHeader,

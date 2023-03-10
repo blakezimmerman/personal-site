@@ -5,7 +5,8 @@ export const footer = sprinkles({
   display: "flex",
   justifyContent: "center",
   px: 16,
-  py: 24,
+  paddingTop: 48,
+  paddingBottom: 24,
 });
 
 export const footerText = style([
