@@ -1,0 +1,11 @@
+---
+import { footer, footerText } from "./Footer.css";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class={footer}>
+  <small class={footerText}>
+    Designed & Developed by Blake Zimmerman<br />&copy; {currentYear}
+  </small>
+</footer>

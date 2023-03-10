@@ -1,7 +1,17 @@
 import { style } from "@vanilla-extract/css";
 import { sprinkles } from "../../styles/sprinkles.css";
 
-export const introContainer = sprinkles({});
+export const introContainer = style([
+  sprinkles({
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+  }),
+  {
+    flexGrow: 1,
+    flexShrink: 1,
+  },
+]);
 
 export const introduction = sprinkles({
   fontWeight: "regular",

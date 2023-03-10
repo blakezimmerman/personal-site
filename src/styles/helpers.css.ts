@@ -1,4 +1,6 @@
 import { style } from "@vanilla-extract/css";
+import { responsiveStyle } from "./responsiveStyle";
+import { fontSizes, spaces } from "./scales";
 import { sprinkles } from "./sprinkles.css";
 
 export const visuallyHide = style({
@@ -22,4 +24,15 @@ export const translucentSuface = style([
     backdropFilter: "blur(12px)",
     WebkitBackdropFilter: "blur(12px)",
   },
+]);
+
+export const paddingForHeader = style([
+  {
+    paddingTop: `calc(${spaces[16]} + ${spaces[16]} + ${fontSizes[24]})`, // Height of header
+  },
+  responsiveStyle({
+    tablet: {
+      paddingTop: `calc(${spaces[32]} + ${spaces[32]} + ${fontSizes[32]})`, // Height of header
+    },
+  }),
 ]);
