@@ -1,6 +1,13 @@
 import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 import { breakpoints } from "./responsiveStyle";
-import { fontFamilies, fontSizes, fontWeights, radii, spaces } from "./scales";
+import {
+  fontFamilies,
+  fontSizes,
+  fontStyles,
+  fontWeights,
+  radii,
+  spaces,
+} from "./scales";
 import { vars } from "./theme.css";
 
 const responsiveProperties = defineProperties({
@@ -15,7 +22,7 @@ const responsiveProperties = defineProperties({
     display: ["none", "block", "inline", "flex"],
     flexDirection: ["row", "column"],
     flexWrap: ["wrap", "wrap-reverse", "nowrap"],
-    alignItems: [
+    justifyContent: [
       "stretch",
       "flex-start",
       "center",
@@ -23,7 +30,7 @@ const responsiveProperties = defineProperties({
       "space-between",
       "space-around",
     ],
-    justifyContent: [
+    alignItems: [
       "stretch",
       "flex-start",
       "center",
@@ -46,8 +53,9 @@ const responsiveProperties = defineProperties({
     marginRight: spaces,
     borderRadius: radii,
     fontFamily: fontFamilies,
-    fontSize: fontSizes,
+    fontStyle: fontStyles,
     fontWeight: fontWeights,
+    fontSize: fontSizes,
   },
   shorthands: {
     bg: ["backgroundColor"],

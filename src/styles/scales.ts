@@ -3,6 +3,14 @@ export const fontFamilies = {
   monospace: `Courier, monospace`,
 };
 
+export const fontStyles = ["normal", "italic"];
+
+export const fontWeights = {
+  regular: "400",
+  medium: "500",
+  bold: "700",
+};
+
 export const fontSizes = {
   12: "0.75rem",
   14: "0.875rem",
@@ -17,12 +25,6 @@ export const fontSizes = {
   44: "2.75rem",
   52: "3.25rem",
   96: "6rem",
-};
-
-export const fontWeights = {
-  regular: "400",
-  medium: "500",
-  bold: "700",
 };
 
 export const borderWidths = {

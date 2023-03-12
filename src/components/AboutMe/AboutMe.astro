@@ -1,39 +1,50 @@
 ---
+import {
+  sectionContainer,
+  sectionContents,
+  sectionHeading,
+} from "../../styles/helpers.css";
 import Arrow from "../Vectors/Arrow.astro";
 import {
-  aboutMeContainer,
-  headshot,
-  paragraphsContainer,
-  paragraph,
-  latte,
-  latteContainer,
-  latteCaption,
   arrow,
+  headshot,
+  latte,
+  latteCaption,
   latteCaptionContainer,
+  latteContainer,
+  paragraph,
+  paragraphsContainer,
 } from "./AboutMe.css";
 ---
 
-<section id="about-me" class={aboutMeContainer}>
-  <img class={headshot} src="/BlakeZimmerman.jpg" alt="A handsome headshot of me" />
-  <div class={paragraphsContainer}>
-    <p class={paragraph}>
-      I’m Blake – an NYC-based software engineer dedicated to his craft that seeks to
-      build better web experiences.
-    </p>
-    <p class={paragraph}>
-      While I often do full-stack web development, I primarily focus on the front-end. I’m
-      most interested in design systems and functional programming.
-    </p>
-    <p class={paragraph}>
-      When I’m not at my desk coding, you can find me at the espresso machine practicing
-      my latte art.
-    </p>
-  </div>
-  <figure class={latteContainer}>
-    <div class={latteCaptionContainer}>
-      <figcaption class={latteCaption}>My latte art</figcaption>
-      <Arrow className={arrow} />
+<section id="about-me" class={sectionContainer}>
+  <div class={sectionContents}>
+    <h1 class={sectionHeading}>About Me</h1>
+    <img
+      class={headshot}
+      src="/images/BlakeZimmerman.jpg"
+      alt="A handsome headshot of me"
+    />
+    <div class={paragraphsContainer}>
+      <p class={paragraph}>
+        I’m Blake – an NYC-based software engineer dedicated to his craft that seeks to
+        build better web experiences.
+      </p>
+      <p class={paragraph}>
+        While I often do full-stack web development, I primarily focus on the front-end.
+        I’m most interested in design systems and functional programming.
+      </p>
+      <p class={paragraph}>
+        When I’m not at my desk coding, you can find me at the espresso machine practicing
+        my latte art.
+      </p>
     </div>
-    <img class={latte} src="/latte.png" alt="A pretty latte I made" />
-  </figure>
+    <figure class={latteContainer}>
+      <div class={latteCaptionContainer}>
+        <figcaption class={latteCaption}>My latte art</figcaption>
+        <Arrow className={arrow} />
+      </div>
+      <img class={latte} src="/images/latte.png" alt="A pretty latte I made" />
+    </figure>
+  </div>
 </section>

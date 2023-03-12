@@ -10,7 +10,7 @@ export const aboutMeContainer = style([
     flexDirection: "column",
     alignItems: "center",
     p: 24,
-    gap: 48,
+    gap: [48, 64],
   }),
   paddingForHeader,
 ]);
@@ -32,12 +32,9 @@ export const paragraphsContainer = sprinkles({
   gap: 24,
 });
 
-export const paragraph = style([
-  sprinkles({ fontSize: [16, 18] }),
-  {
-    maxWidth: "50ch",
-  },
-]);
+export const paragraph = sprinkles({
+  fontSize: [16, 18],
+});
 
 export const latteContainer = style([
   sprinkles({

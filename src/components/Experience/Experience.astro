@@ -1,0 +1,51 @@
+---
+import { experienceItems } from "../../data/experience";
+import {
+  sectionContainer,
+  sectionContents,
+  sectionHeading,
+} from "../../styles/helpers.css";
+import {
+  companyLogo,
+  experienceItem,
+  roleContainer,
+  roleDepartment,
+  roleDetails,
+  roleHeader,
+  roleTimeline,
+  roleTitle,
+} from "./Experience.css";
+---
+
+<section id="experience" class={sectionContainer}>
+  <div class={sectionContents}>
+    <h1 class={sectionHeading}>Experience</h1>
+    {
+      experienceItems.map((experience) => (
+        <section class={experienceItem}>
+          <img
+            class={companyLogo}
+            src={experience.logoHref}
+            alt={`${experience.companyName} logo`}
+          />
+          {experience.roles.map((role) => (
+            <div class={roleContainer}>
+              <div class={roleHeader}>
+                <div>
+                  <h1 class={roleTitle}>{role.title}</h1>
+                  <h2 class={roleDepartment}>{role.department}</h2>
+                </div>
+                <p class={roleTimeline}>{role.timeline}</p>
+              </div>
+              <ul class={roleDetails}>
+                {role.details.map((detail) => (
+                  <li>{detail}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
+      ))
+    }
+  </div>
+</section>

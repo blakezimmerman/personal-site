@@ -29,3 +29,8 @@ globalStyle("input, textarea", {
   padding: 0,
   borderRadius: 0,
 });
+
+globalStyle("ul", {
+  margin: 0,
+  paddingLeft: "1.75rem",
+});
