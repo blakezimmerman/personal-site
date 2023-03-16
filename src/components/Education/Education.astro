@@ -1,0 +1,42 @@
+---
+import { educationItems } from "../../data/education";
+import Section from "../../layouts/PageSection/PageSection.astro";
+import {
+  experienceItem,
+  roleContainer,
+  roleDepartment,
+  roleDetails,
+  roleHeader,
+  roleTimeline,
+  roleTitle,
+} from "../Experience/Experience.css";
+import { schoolLogo } from "./Education.css";
+---
+
+<Section id="education" heading="Education">
+  {
+    educationItems.map((education) => (
+      <section class={experienceItem}>
+        <img
+          class={schoolLogo}
+          src={education.logoHref}
+          alt={`${education.school} logo`}
+        />
+        <div class={roleContainer}>
+          <div class={roleHeader}>
+            <div>
+              <h1 class={roleTitle}>{education.degree}</h1>
+              <h2 class={roleDepartment}>{education.field}</h2>
+            </div>
+            <p class={roleTimeline}>{education.timeline}</p>
+          </div>
+          <ul class={roleDetails}>
+            {education.extracurriculars.map((extracurricular) => (
+              <li>{extracurricular}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    ))
+  }
+</Section>

@@ -17,3 +17,7 @@ export const responsiveStyle = (breakpointStyles: {
 
   return { "@media": mediaStyles };
 };
+
+export const darkModeStyle = (styleRule: StyleRule) => {
+  return { "@media": { "(prefers-color-scheme: dark)": styleRule } };
+};

@@ -2,8 +2,9 @@
 import Section from "../../layouts/PageSection/PageSection.astro";
 import {
   contactPointsContainer,
-  socialPlatformsContainer,
+  invertSocialIcon,
   socialIcon,
+  socialPlatformsContainer,
 } from "./Contact.css";
 ---
 
@@ -23,7 +24,7 @@ import {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/images/github.svg" alt="GitHub Logo" class={socialIcon} />
+        <img src="/images/github.svg" alt="GitHub Logo" class={invertSocialIcon} />
       </a>
     </div>
   </div>
