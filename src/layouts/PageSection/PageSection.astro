@@ -1,0 +1,17 @@
+---
+import { sectionContainer, sectionContents, sectionHeading } from "./PageSection.css";
+
+export interface Props {
+  id: string;
+  heading: string;
+}
+
+const { id, heading } = Astro.props;
+---
+
+<section id={id} class={sectionContainer}>
+  <div class={sectionContents}>
+    <h1 class={sectionHeading}>{heading}</h1>
+    <slot />
+  </div>
+</section>

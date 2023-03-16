@@ -1,19 +1,7 @@
 import { style } from "@vanilla-extract/css";
-import { paddingForHeader } from "../../styles/helpers.css";
 import { borderWidths } from "../../styles/scales";
 import { sprinkles } from "../../styles/sprinkles.css";
 import { vars } from "../../styles/theme.css";
-
-export const aboutMeContainer = style([
-  sprinkles({
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    p: 24,
-    gap: [48, 64],
-  }),
-  paddingForHeader,
-]);
 
 export const headshot = style([
   sprinkles({

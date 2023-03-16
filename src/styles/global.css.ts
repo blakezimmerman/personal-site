@@ -25,6 +25,11 @@ globalStyle("button", {
   color: vars.colors.text,
 });
 
+globalStyle("a", {
+  textDecoration: "none",
+  color: vars.colors.link,
+});
+
 globalStyle("input, textarea", {
   padding: 0,
   borderRadius: 0,

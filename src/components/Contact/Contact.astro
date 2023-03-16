@@ -1,0 +1,30 @@
+---
+import Section from "../../layouts/PageSection/PageSection.astro";
+import {
+  contactPointsContainer,
+  socialPlatformsContainer,
+  socialIcon,
+} from "./Contact.css";
+---
+
+<Section id="contact" heading="Contact">
+  <div class={contactPointsContainer}>
+    <a href="mailto:blake.zimmerman@me.com">blake.zimmerman@me.com</a>
+    <div class={socialPlatformsContainer}>
+      <a
+        href="https://www.linkedin.com/in/blake-zimmerman/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/images/linkedin.svg" alt="LinkedIn Logo" class={socialIcon} />
+      </a>
+      <a
+        href="https://github.com/blakezimmerman"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/images/github.svg" alt="GitHub Logo" class={socialIcon} />
+      </a>
+    </div>
+  </div>
+</Section>
