@@ -4,7 +4,9 @@ import { header, logo, nav, navItem } from "./Header.css";
 ---
 
 <header class={header}>
-  <Logo className={logo} />
+  <a class={navItem} href="/" aria-label="Home">
+    <Logo className={logo} />
+  </a>
   <nav class={nav}>
     <a class={navItem} href="#about-me">About Me</a>
     <a class={navItem} href="#contact">Contact</a>
