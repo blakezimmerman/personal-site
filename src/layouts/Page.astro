@@ -18,9 +18,30 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="mask-icon" href="/favicon.svg" color="#ffffff" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="mask-icon"
+      href="/mask-icon.svg"
+      color="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="mask-icon"
+      href="/mask-icon.svg"
+      color="#000000"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
     <title>{title}</title>
+    <meta
+      name="description"
+      content="An NYC-based software engineer that's dedicated to his craft."
+    />
+    <meta
+      name="keywords"
+      content="Blake,Zimmerman,JavaScript,TypeScript,React,Software,Engineering,Web,Developer,NYC"
+    />
   </head>
   <body>
     <main>
