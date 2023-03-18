@@ -1,6 +1,8 @@
 import { style } from "@vanilla-extract/css";
 import { minFullHeight, paddingForHeader } from "../../styles/helpers.css";
+import { fadeIn, fadeUp } from "../../styles/keyframes.css";
 import { responsiveStyle } from "../../styles/responsiveStyle";
+import { durations } from "../../styles/scales";
 import { sprinkles } from "../../styles/sprinkles.css";
 
 export const homeContainer = style([
@@ -29,6 +31,9 @@ export const introWithGraphicContainer = style([
     alignSelf: "center",
     width: "100%",
     flex: 2,
+    animationName: fadeUp,
+    animationDuration: durations[3],
+    animationTimingFunction: "ease-out",
   },
 ]);
 
@@ -55,5 +60,11 @@ export const resumeButtonWrapper = style([
   }),
   {
     flex: 1,
+    opacity: 0,
+    animationName: fadeIn,
+    animationDuration: durations[3],
+    animationDelay: durations[1],
+    animationTimingFunction: "ease-out",
+    animationFillMode: "forwards",
   },
 ]);

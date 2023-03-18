@@ -62,3 +62,10 @@ export const spaces = {
   160: "160px",
   240: "240px",
 };
+
+export const durations = {
+  0: "0s",
+  1: "0.2s",
+  2: "0.4s",
+  3: "0.6s",
+};
