@@ -10,6 +10,15 @@ import {
 } from "./scales";
 import { vars } from "./theme.css";
 
+const flexAlignments = [
+  "stretch",
+  "flex-start",
+  "center",
+  "flex-end",
+  "space-between",
+  "space-around",
+];
+
 const responsiveProperties = defineProperties({
   conditions: {
     mobile: {},
@@ -22,22 +31,10 @@ const responsiveProperties = defineProperties({
     display: ["none", "block", "inline", "flex"],
     flexDirection: ["row", "column"],
     flexWrap: ["wrap", "wrap-reverse", "nowrap"],
-    justifyContent: [
-      "stretch",
-      "flex-start",
-      "center",
-      "flex-end",
-      "space-between",
-      "space-around",
-    ],
-    alignItems: [
-      "stretch",
-      "flex-start",
-      "center",
-      "flex-end",
-      "space-between",
-      "space-around",
-    ],
+    justifyContent: flexAlignments,
+    alignItems: flexAlignments,
+    justifySelf: flexAlignments,
+    alignSelf: flexAlignments,
     color: vars.colors,
     backgroundColor: vars.colors,
     height: spaces,

@@ -14,11 +14,15 @@ import {
 ---
 
 <Section id="about-me" heading="About Me">
-  <img
-    class={headshot}
-    src="/images/BlakeZimmerman.jpg"
-    alt="A handsome headshot of me"
-  />
+  <picture>
+    <source type="image/webp" srcset="/images/BlakeZimmerman.webp" />
+    <source type="image/jpeg" srcset="/images/BlakeZimmerman.jpg" />
+    <img
+      class={headshot}
+      src="/images/BlakeZimmerman.jpg"
+      alt="A handsome headshot of me"
+    />
+  </picture>
   <div class={paragraphsContainer}>
     <p class={paragraph}>
       I’m Blake – an NYC-based software engineer dedicated to his craft that seeks to
@@ -38,6 +42,10 @@ import {
       <figcaption class={latteCaption}>My latte art</figcaption>
       <Arrow className={arrow} />
     </div>
-    <img class={latte} src="/images/latte.png" alt="A pretty latte I made" />
+    <picture>
+      <source type="image/webp" srcset="/images/latte.webp" />
+      <source type="image/png" srcset="/images/latte.png" />
+      <img class={latte} src="/images/latte.png" alt="A pretty latte I made" />
+    </picture>
   </figure>
 </Section>

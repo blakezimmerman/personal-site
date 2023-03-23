@@ -14,7 +14,7 @@ export interface ExperienceRole {
 export const experienceItems: Experience[] = [
   {
     companyName: "Wonder",
-    logoHref: "/images/wonder.png",
+    logoHref: "/images/wonder",
     roles: [
       {
         title: "Senior Software Engineer II",
@@ -38,7 +38,7 @@ export const experienceItems: Experience[] = [
   },
   {
     companyName: "HealCo",
-    logoHref: "/images/healco.png",
+    logoHref: "/images/healco",
     roles: [
       {
         title: "Senior Software Engineer",
@@ -54,7 +54,7 @@ export const experienceItems: Experience[] = [
   },
   {
     companyName: "Walmart",
-    logoHref: "/images/walmart.png",
+    logoHref: "/images/walmart",
     roles: [
       {
         title: "Software Engineer III",
@@ -71,7 +71,7 @@ export const experienceItems: Experience[] = [
   },
   {
     companyName: "Jet",
-    logoHref: "/images/jet.png",
+    logoHref: "/images/jet",
     roles: [
       {
         title: "Software Engineering Intern",
@@ -90,7 +90,7 @@ export const experienceItems: Experience[] = [
   },
   {
     companyName: "BAE Systems",
-    logoHref: "/images/bae.png",
+    logoHref: "/images/bae",
     roles: [
       {
         title: "Technical Intern II",

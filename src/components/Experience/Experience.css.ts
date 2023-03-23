@@ -5,6 +5,7 @@ export const experienceItem = style([
   sprinkles({
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
     gap: 16,
   }),
   {
@@ -25,6 +26,7 @@ export const companyLogo = style([
 export const roleContainer = sprinkles({
   display: "flex",
   flexDirection: "column",
+  alignSelf: "flex-start",
   gap: 8,
 });
 

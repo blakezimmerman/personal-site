@@ -17,11 +17,15 @@ import { schoolLogo } from "./Education.css";
   {
     educationItems.map((education) => (
       <section class={experienceItem}>
-        <img
-          class={schoolLogo}
-          src={education.logoHref}
-          alt={`${education.school} logo`}
-        />
+        <picture>
+          <source type="image/webp" srcset={`${education.logoHref}.webp`} />
+          <source type="image/png" srcset={`${education.logoHref}.png`} />
+          <img
+            class={schoolLogo}
+            src={`${education.logoHref}.png`}
+            alt={`${education.school} logo`}
+          />
+        </picture>
         <div class={roleContainer}>
           <div class={roleHeader}>
             <div>

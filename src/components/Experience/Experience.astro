@@ -17,11 +17,15 @@ import {
   {
     experienceItems.map((experience) => (
       <section class={experienceItem}>
-        <img
-          class={companyLogo}
-          src={experience.logoHref}
-          alt={`${experience.companyName} logo`}
-        />
+        <picture>
+          <source type="image/webp" srcset={`${experience.logoHref}.webp`} />
+          <source type="image/png" srcset={`${experience.logoHref}.png`} />
+          <img
+            class={companyLogo}
+            src={`${experience.logoHref}.png`}
+            alt={`${experience.companyName} logo`}
+          />
+        </picture>
         {experience.roles.map((role) => (
           <div class={roleContainer}>
             <div class={roleHeader}>

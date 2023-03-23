@@ -10,7 +10,7 @@ export interface Education {
 export const educationItems: Education[] = [
   {
     school: "Stevens Institute of Technology",
-    logoHref: "/images/stevens.png",
+    logoHref: "/images/stevens",
     degree: "Bachelors of Engineering",
     field: "Software Engineering",
     timeline: "August 2014 - May 2019",
