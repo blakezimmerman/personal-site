@@ -26,7 +26,7 @@ export const name = sprinkles({
 export const tagline = style([
   sprinkles({
     fontWeight: "medium",
-    color: "textSubdued",
+    color: "textFaint",
     fontSize: [24, 32],
     marginTop: [12, 16],
   }),

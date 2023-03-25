@@ -28,5 +28,5 @@ export const sectionContents = style([
 export const sectionHeading = sprinkles({
   fontWeight: "bold",
   fontSize: [20, 28],
-  color: "textSubdued",
+  color: "textFaint",
 });

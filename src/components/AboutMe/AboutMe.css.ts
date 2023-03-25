@@ -10,7 +10,7 @@ export const headshot = style([
   }),
   {
     objectFit: "cover",
-    border: `solid ${borderWidths[3]} ${vars.colors.text}`,
+    border: `solid ${borderWidths[3]} ${vars.colors.textStrong}`,
   },
 ]);
 
@@ -22,6 +22,7 @@ export const paragraphsContainer = sprinkles({
 
 export const paragraph = sprinkles({
   fontSize: [16, 18],
+  color: "text",
 });
 
 export const latteContainer = style([

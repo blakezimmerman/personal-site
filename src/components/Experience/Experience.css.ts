@@ -55,6 +55,6 @@ export const roleDetails = sprinkles({
   display: "flex",
   flexDirection: "column",
   gap: 8,
-  color: "textSubdued",
+  color: "text",
   fontSize: [14, 16],
 });

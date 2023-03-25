@@ -8,7 +8,7 @@ globalStyle("*, ::before, ::after", {
 globalStyle("body", {
   margin: 0,
   padding: 0,
-  color: vars.colors.text,
+  color: vars.colors.textStrong,
   backgroundColor: vars.colors.surface,
   fontFamily: `"Poppins", sans-serif`,
 });
@@ -22,7 +22,7 @@ globalStyle("button", {
   border: "none",
   padding: 0,
   cursor: "pointer",
-  color: vars.colors.text,
+  color: vars.colors.textStrong,
 });
 
 globalStyle("a", {

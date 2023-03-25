@@ -3,7 +3,7 @@ import { sprinkles } from "../../styles/sprinkles.css";
 
 export const button = style([
   sprinkles({
-    bg: "text",
+    bg: "textStrong",
     color: "surface",
     borderRadius: 2,
     px: 12,

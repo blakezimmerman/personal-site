@@ -45,11 +45,11 @@ export const nav = sprinkles({
   display: "flex",
   alignItems: "center",
   gap: [24, 32, 48],
-  color: "text",
+  color: "textStrong",
 });
 
 export const navItem = style([
-  sprinkles({ color: "text", fontSize: [16, 20] }),
+  sprinkles({ color: "textStrong", fontSize: [16, 20] }),
   {
     textDecoration: "none",
   },
