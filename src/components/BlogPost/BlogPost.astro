@@ -1,10 +1,19 @@
 ---
+import "./Markdown.css";
+
 import type { AstroComponentFactory } from "astro/dist/runtime/server";
 import type { CollectionEntry } from "astro:content";
 
 import { formatDate } from "../../utils/formatDate";
 import BlogAuthorDetails from "../BlogAuthorDetails/BlogAuthorDetails.astro";
-import * as styles from "./BlogPost.css";
+import {
+  blogPost,
+  blogPostContainer,
+  divider,
+  heading,
+  postContentContainer,
+  postDetails,
+} from "./BlogPost.css";
 
 export interface Props {
   data: CollectionEntry<"blog">["data"];
@@ -14,17 +23,17 @@ export interface Props {
 const { data, Content } = Astro.props;
 ---
 
-<div class={styles.blogPostContainer}>
-  <div class={styles.blogPost}>
-    <h1 class={styles.heading}>{data.title}</h1>
-    <div class={styles.postDetails}>
+<div class={blogPostContainer}>
+  <div class={blogPost}>
+    <h1 class={heading}>{data.title}</h1>
+    <div class={postDetails}>
       <div>by {data.author}</div>
       <div>{formatDate(data.pubDate)}</div>
     </div>
-    <div class={styles.postContent}>
+    <div class:list={[postContentContainer, "markdown"]}>
       <Content />
     </div>
-    <div class={styles.divider}></div>
+    <div class={divider}></div>
     <BlogAuthorDetails />
     <a href="/blog">← Read more posts</a>
   </div>
