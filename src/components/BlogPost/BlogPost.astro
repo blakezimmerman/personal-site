@@ -1,0 +1,38 @@
+---
+import type { AstroComponentFactory } from "astro/dist/runtime/server";
+import type { CollectionEntry } from "astro:content";
+
+import { formatDate } from "../../utils/formatDate";
+import BlogAuthorDetails from "../BlogAuthorDetails/BlogAuthorDetails.astro";
+import {
+  blogPost,
+  blogPostContainer,
+  divider,
+  heading,
+  postContent,
+  postDetails,
+} from "./BlogPost.css";
+
+export interface Props {
+  data: CollectionEntry<"blog">["data"];
+  Content: AstroComponentFactory;
+}
+
+const { data, Content } = Astro.props;
+---
+
+<div class={blogPostContainer}>
+  <div class={blogPost}>
+    <h1 class={heading}>{data.title}</h1>
+    <div class={postDetails}>
+      <div>by {data.author}</div>
+      <div>{formatDate(data.pubDate)}</div>
+    </div>
+    <div class={postContent}>
+      <Content />
+    </div>
+    <div class={divider}></div>
+    <BlogAuthorDetails />
+    <a href="/blog">← Read more posts</a>
+  </div>
+</div>

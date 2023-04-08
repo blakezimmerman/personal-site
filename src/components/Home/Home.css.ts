@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
-import { minFullHeight, paddingForHeader } from "../../styles/helpers.css";
+
+import { minFullHeightWithHeader } from "../../styles/helpers.css";
 import { fadeIn, fadeUp } from "../../styles/keyframes.css";
 import { responsiveStyle } from "../../styles/responsiveStyle";
 import { durations } from "../../styles/scales";
@@ -10,10 +11,10 @@ export const homeContainer = style([
     display: "flex",
     flexDirection: "column",
     p: [24, 48],
+    paddingTop: 0,
     gap: 32,
   }),
-  minFullHeight,
-  paddingForHeader,
+  minFullHeightWithHeader,
 ]);
 
 export const introWithGraphicContainer = style([

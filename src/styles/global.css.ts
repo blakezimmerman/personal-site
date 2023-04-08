@@ -1,4 +1,5 @@
 import { globalStyle } from "@vanilla-extract/css";
+
 import { vars } from "./theme.css";
 
 globalStyle("*, ::before, ::after", {
@@ -8,7 +9,7 @@ globalStyle("*, ::before, ::after", {
 globalStyle("body", {
   margin: 0,
   padding: 0,
-  color: vars.colors.textStrong,
+  color: vars.colors.text,
   backgroundColor: vars.colors.surface,
   fontFamily: `"Poppins", sans-serif`,
 });

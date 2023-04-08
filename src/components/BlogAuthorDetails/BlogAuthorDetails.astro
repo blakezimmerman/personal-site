@@ -1,0 +1,28 @@
+---
+import {
+  authorDetails,
+  blogAuthorDetailsContainer,
+  description,
+  greeting,
+  headshot,
+  headshotContainer,
+} from "./BlogAuthorDetails.css";
+---
+
+<div class={blogAuthorDetailsContainer}>
+  <picture class={headshotContainer}>
+    <source type="image/webp" srcset="/images/BlakeZimmerman.webp" />
+    <source type="image/jpeg" srcset="/images/BlakeZimmerman.jpg" />
+    <img
+      class={headshot}
+      src="/images/BlakeZimmerman.jpg"
+      alt="A handsome headshot of me"
+    />
+  </picture>
+  <div class={authorDetails}>
+    <p class={greeting}>Hi! I'm Blake Zimmerman</p>
+    <p class={description}>
+      I'm a software engineer trying to turn my thoughts into words
+    </p>
+  </div>
+</div>

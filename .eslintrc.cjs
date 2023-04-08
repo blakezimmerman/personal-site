@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "simple-import-sort", "import"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -7,6 +7,14 @@ module.exports = {
     "plugin:astro/jsx-a11y-strict",
   ],
   ignorePatterns: [".eslintrc.cjs", "astro.config.mjs"],
+  rules: {
+    // Add global rule overrides here
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "import/first": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+  },
   overrides: [
     {
       files: ["*.astro"],
@@ -16,7 +24,7 @@ module.exports = {
         extraFileExtensions: [".astro"],
       },
       rules: {
-        // Add rule overrides here
+        // Add Astro-specific rule overrides here
       },
     },
   ],

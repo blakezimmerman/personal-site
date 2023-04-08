@@ -3,18 +3,18 @@ import AboutMe from "../components/AboutMe/AboutMe.astro";
 import Contact from "../components/Contact/Contact.astro";
 import Education from "../components/Education/Education.astro";
 import Experience from "../components/Experience/Experience.astro";
-import Footer from "../components/Footer/Footer.astro";
-import Header from "../components/Header/Header.astro";
 import Home from "../components/Home/Home.astro";
 import Page from "../layouts/Page.astro";
 ---
 
-<Page title="Blake Zimmerman">
-  <Header />
+<Page
+  title="Blake Zimmerman"
+  description="An NYC-based software engineer that's dedicated to his craft."
+  keywords="Blake Zimmerman, JavaScript, TypeScript, React, software engineering, web developer, NYC"
+>
   <Home />
   <AboutMe />
   <Experience />
   <Education />
   <Contact />
-  <Footer />
 </Page>

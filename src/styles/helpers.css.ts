@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+
 import { responsiveStyle } from "./responsiveStyle";
 import { fontSizes, spaces } from "./scales";
 import { sprinkles } from "./sprinkles.css";
@@ -14,10 +15,6 @@ export const visuallyHide = style({
   width: "1px",
 });
 
-export const minFullHeight = style({
-  minHeight: ["100vh", "100svh"],
-});
-
 export const translucentSuface = style([
   sprinkles({ bg: "surfaceTranslucent" }),
   {
@@ -26,13 +23,29 @@ export const translucentSuface = style([
   },
 ]);
 
+export const mobileHeaderHeight = `calc(${spaces[16]} + ${spaces[16]} + ${fontSizes[24]})`;
+export const tabletHeaderHeight = `calc(${spaces[32]} + ${spaces[32]} + ${fontSizes[32]})`;
+
 export const paddingForHeader = style([
+  { paddingTop: mobileHeaderHeight },
+  responsiveStyle({
+    tablet: { paddingTop: tabletHeaderHeight },
+  }),
+]);
+
+export const minFullHeightWithHeader = style([
   {
-    paddingTop: `calc(${spaces[16]} + ${spaces[16]} + ${fontSizes[24]})`, // Height of header
+    minHeight: [
+      `calc(100vh - ${mobileHeaderHeight})`,
+      `calc(100svh - ${mobileHeaderHeight})`,
+    ],
   },
   responsiveStyle({
     tablet: {
-      paddingTop: `calc(${spaces[32]} + ${spaces[32]} + ${fontSizes[32]})`, // Height of header
+      minHeight: [
+        `calc(100vh - ${tabletHeaderHeight})`,
+        `calc(100svh - ${tabletHeaderHeight})`,
+      ],
     },
   }),
 ]);

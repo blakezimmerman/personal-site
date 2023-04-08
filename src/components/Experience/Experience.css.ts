@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+
 import { sprinkles } from "../../styles/sprinkles.css";
 
 export const experienceItem = style([
@@ -39,11 +40,13 @@ export const roleHeader = sprinkles({
 export const roleTitle = sprinkles({
   fontWeight: "medium",
   fontSize: [20, 24],
+  color: "textStrong",
 });
 
 export const roleDepartment = sprinkles({
   fontWeight: "medium",
   fontSize: [14, 16],
+  color: "textStrong",
 });
 
 export const roleTimeline = sprinkles({
