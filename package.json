@@ -13,6 +13,7 @@
     "prettier:fix": "prettier --write 'src/**/*.{astro,js,jsx,ts,tsx}'"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^1.2.2",
     "@fontsource/poppins": "^4.5.10",
     "@vanilla-extract/css": "^1.11.0",
     "@vanilla-extract/sprinkles": "^1.5.2",
