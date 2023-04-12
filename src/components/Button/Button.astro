@@ -1,7 +1,25 @@
 ---
-import { button } from "./Button.css";
+import {
+  button,
+  nonRoundButton,
+  rectangleButton,
+  roundButton,
+  squareButton,
+} from "./Button.css";
+
+export interface Props {
+  ariaLabel?: string;
+  round?: boolean;
+  square?: boolean;
+}
+
+const { ariaLabel, round, square } = Astro.props;
+
+const classList = [button];
+classList.push(round ? roundButton : nonRoundButton);
+classList.push(square ? squareButton : rectangleButton);
 ---
 
-<button class={button}>
+<button aria-label={ariaLabel} class:list={classList}>
   <slot />
 </button>

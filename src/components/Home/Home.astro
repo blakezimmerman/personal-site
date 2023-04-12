@@ -1,11 +1,13 @@
 ---
-import LinkButton from "../Button/LinkButton.astro";
+import Button from "../Button/Button.astro";
+import ArrowDown from "../Vectors/ArrowDown.astro";
 import Computer from "./Computer.astro";
 import {
+  arrowDown,
   graphicContainer,
   homeContainer,
   introWithGraphicContainer,
-  resumeButtonWrapper,
+  scrollDownButtonWrapper,
 } from "./Home.css";
 import Introduction from "./Introduction.astro";
 ---
@@ -17,7 +19,15 @@ import Introduction from "./Introduction.astro";
       <Computer />
     </div>
   </div>
-  <div class={resumeButtonWrapper}>
-    <LinkButton href="/BlakeZimmermanResume.pdf">View My Resume</LinkButton>
+  <div class={scrollDownButtonWrapper}>
+    <Button round square ariaLabel="Scroll Down">
+      <ArrowDown className={arrowDown} />
+    </Button>
   </div>
 </section>
+
+<script>
+  document.querySelector("[aria-label='Scroll Down']")?.addEventListener("click", () => {
+    document.querySelector("#about-me")?.scrollIntoView({ behavior: "smooth" });
+  });
+</script>

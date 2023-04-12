@@ -1,13 +1,26 @@
 ---
-import { linkButton } from "./Button.css";
+import {
+  linkButton,
+  nonRoundButton,
+  rectangleButton,
+  roundButton,
+  squareButton,
+} from "./Button.css";
 
 export interface Props {
   href: string;
+  ariaLabel?: string;
+  round?: boolean;
+  square?: boolean;
 }
 
-const { href } = Astro.props;
+const { ariaLabel, href, round, square } = Astro.props;
+
+const classList = [linkButton];
+classList.push(round ? roundButton : nonRoundButton);
+classList.push(square ? squareButton : rectangleButton);
 ---
 
-<a class={linkButton} href={href}>
+<a aria-label={ariaLabel} class:list={classList} href={href}>
   <slot />
 </a>

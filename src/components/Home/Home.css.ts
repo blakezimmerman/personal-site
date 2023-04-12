@@ -53,7 +53,7 @@ export const graphicContainer = style([
   }),
 ]);
 
-export const resumeButtonWrapper = style([
+export const scrollDownButtonWrapper = style([
   sprinkles({
     display: "flex",
     justifyContent: "center",
@@ -69,3 +69,7 @@ export const resumeButtonWrapper = style([
     animationFillMode: "forwards",
   },
 ]);
+
+export const arrowDown = sprinkles({
+  size: [24, 32],
+});
