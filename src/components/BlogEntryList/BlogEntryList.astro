@@ -28,7 +28,7 @@ const { blogEntries } = Astro.props;
     <div class={postsList}>
       {
         blogEntries.map((entry) => (
-          <a class={blogEntry} href={`/blog/${entry.slug}`}>
+          <a rel="prefetch" class={blogEntry} href={`/blog/${entry.slug}`}>
             <div class={title}>{entry.data.title}</div>
             <div class={date}>{formatDate(entry.data.pubDate)}</div>
             <div class={description}>
