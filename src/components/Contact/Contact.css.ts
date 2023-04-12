@@ -12,16 +12,17 @@ export const contactPointsContainer = sprinkles({
 
 export const socialPlatformsContainer = sprinkles({
   display: "flex",
-  gap: 24,
+  gap: 32,
 });
 
 export const socialIcon = sprinkles({
-  size: [60, 64],
+  size: 40,
 });
 
 export const invertSocialIcon = style([
   socialIcon,
+  { filter: "invert(100%)" },
   darkModeStyle({
-    filter: "invert(100%)",
+    filter: "invert(0%)",
   }),
 ]);
