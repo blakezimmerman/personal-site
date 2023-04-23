@@ -1,9 +1,8 @@
 import { style } from "@vanilla-extract/css";
 
 import { translucentSuface } from "../../styles/helpers.css";
-import { fadeIn } from "../../styles/keyframes.css";
 import { responsiveStyle } from "../../styles/responsiveStyle";
-import { durations, fontSizes } from "../../styles/scales";
+import { fontSizes } from "../../styles/scales";
 import { sprinkles } from "../../styles/sprinkles.css";
 
 export const header = style([
@@ -22,12 +21,6 @@ export const header = style([
     left: 0,
     right: 0,
     zIndex: 1,
-    opacity: 0,
-    animationName: fadeIn,
-    animationDuration: durations[3],
-    animationDelay: durations[1],
-    animationTimingFunction: "ease-out",
-    animationFillMode: "forwards",
   },
 ]);
 

@@ -1,20 +1,11 @@
 import { style } from "@vanilla-extract/css";
 
-import { fadeUp } from "../../styles/keyframes.css";
-import { durations } from "../../styles/scales";
 import { sprinkles } from "../../styles/sprinkles.css";
 
-export const blogPostContainer = style([
-  sprinkles({
-    display: "flex",
-    justifyContent: "center",
-  }),
-  {
-    animationName: fadeUp,
-    animationDuration: durations[3],
-    animationTimingFunction: "ease-out",
-  },
-]);
+export const blogPostContainer = sprinkles({
+  display: "flex",
+  justifyContent: "center",
+});
 
 export const blogPost = style([
   sprinkles({
