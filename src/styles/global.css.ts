@@ -11,7 +11,7 @@ globalStyle("body", {
   padding: 0,
   color: vars.colors.text,
   backgroundColor: vars.colors.surface,
-  fontFamily: `"Poppins", sans-serif`,
+  fontFamily: `"Poppins", Verdana, sans-serif`,
 });
 
 globalStyle("h1, h2, h3, h4, h5, h6, p, pre, figure", {
