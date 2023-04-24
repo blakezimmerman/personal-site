@@ -1,7 +1,7 @@
 import { globalStyle } from "@vanilla-extract/css";
 
 import { responsiveStyle } from "../../styles/responsiveStyle";
-import { fontSizes, radii, spaces } from "../../styles/scales";
+import { fontFamilies, fontSizes, radii, spaces } from "../../styles/scales";
 import { vars } from "../../styles/theme.css";
 
 globalStyle(`.markdown p, .markdown ul`, {
@@ -30,6 +30,7 @@ globalStyle(`.markdown li`, {
 });
 
 globalStyle(`.markdown pre`, {
+  fontFamily: fontFamilies.monospace,
   fontSize: fontSizes[14],
   padding: spaces[12],
   borderRadius: radii[2],
@@ -46,6 +47,7 @@ globalStyle(
 );
 
 globalStyle(`.markdown p > code, .markdown li > code`, {
+  fontFamily: fontFamilies.monospace,
   color: vars.colors.textStrong,
   backgroundColor: vars.colors.surface3,
   borderRadius: radii[2],

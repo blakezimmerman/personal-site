@@ -1,5 +1,7 @@
+import { poppins } from "./fonts.css";
+
 export const fontFamilies = {
-  sanSerif: `"Poppins", sans-serif`,
+  sanSerif: `${poppins}, Verdana, sans-serif`,
   monospace: `Courier, monospace`,
 };
 

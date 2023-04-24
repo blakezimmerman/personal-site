@@ -1,5 +1,6 @@
 import { globalStyle } from "@vanilla-extract/css";
 
+import { fontFamilies } from "./scales";
 import { vars } from "./theme.css";
 
 globalStyle("*, ::before, ::after", {
@@ -11,7 +12,7 @@ globalStyle("body", {
   padding: 0,
   color: vars.colors.text,
   backgroundColor: vars.colors.surface,
-  fontFamily: `"Poppins", Verdana, sans-serif`,
+  fontFamily: fontFamilies.sanSerif,
 });
 
 globalStyle("h1, h2, h3, h4, h5, h6, p, pre, figure", {
