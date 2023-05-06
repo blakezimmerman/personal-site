@@ -11,7 +11,7 @@ export const header = style([
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    px: [24, 48],
+    px: [16, 32, 48],
     py: [16, 32],
     gap: [24, 32, 48],
   }),
@@ -25,12 +25,9 @@ export const header = style([
 ]);
 
 export const logo = style([
-  {
-    flexShrink: 0,
-    height: fontSizes[24],
-    width: fontSizes[24],
-  },
+  { flexShrink: 0 },
   responsiveStyle({
+    mobile: { height: fontSizes[24], width: fontSizes[24] },
     tablet: { height: fontSizes[32], width: fontSizes[32] },
   }),
 ]);
@@ -44,7 +41,5 @@ export const nav = sprinkles({
 
 export const navItem = style([
   sprinkles({ color: "textStrong", fontSize: [16, 20] }),
-  {
-    textDecoration: "none",
-  },
+  { textDecoration: "none" },
 ]);

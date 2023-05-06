@@ -9,5 +9,9 @@ module.exports = {
       files: "*.astro",
       options: { parser: "astro" },
     },
+    {
+      files: "*.md",
+      options: { printWidth: 75 },
+    },
   ],
 };

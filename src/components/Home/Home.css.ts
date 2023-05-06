@@ -10,7 +10,8 @@ export const homeContainer = style([
   sprinkles({
     display: "flex",
     flexDirection: "column",
-    p: [24, 48],
+    px: [16, 32, 48],
+    py: [24, 48],
     paddingTop: 0,
     gap: 32,
   }),
@@ -44,10 +45,8 @@ export const graphicContainer = style([
     justifyContent: "center",
     alignItems: "center",
   }),
-  {
-    flex: 1,
-  },
   responsiveStyle({
+    mobile: { flex: 1 },
     tablet: { alignItems: "unset" },
     desktop: { flex: "unset" },
   }),

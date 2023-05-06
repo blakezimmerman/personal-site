@@ -8,7 +8,8 @@ export const sectionContainer = style([
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    p: [24, 48],
+    px: [16, 32, 48],
+    py: [24, 48],
   }),
   paddingForHeader,
 ]);

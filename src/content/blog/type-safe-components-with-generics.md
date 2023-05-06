@@ -71,12 +71,14 @@ const App: React.FC = () => {
   return (
     <Select<Array<"first" | "second" | "third">>
       options={["first", "second", "third"]}
-      // Error: Type '"fourth"' is not assignable to type '"first" | "second" | "third"'
+      // Error: Type '"fourth"' is not assignable to type
+      // '"first" | "second" | "third"'
       initialValue="fourth"
       onChange={(newValue) => {
         if (newValue === "42") {
-          // Error: This condition will always return 'false' since the types
-          // '"first" | "second" | "third"' and '"42"' have no overlap.
+          // Error: This condition will always return 'false' since
+          // the types '"first" | "second" | "third"' and '"42"' have
+          // no overlap.
         }
       }}
     />
@@ -103,12 +105,14 @@ const App: React.FC = () => {
   return (
     <Select
       options={["first", "second", "third"] as const} // const assertion
-      // Error: Type '"fourth"' is not assignable to type '"first" | "second" | "third"'
+      // Error: Type '"fourth"' is not assignable to type
+      // '"first" | "second" | "third"'
       initialValue="fourth"
       onChange={(newValue) => {
         if (newValue === "42") {
-          // Error: This condition will always return 'false' since the types
-          // '"first" | "second" | "third"' and '"42"' have no overlap.
+          // Error: This condition will always return 'false' since
+          // the types '"first" | "second" | "third"' and '"42"' have
+          // no overlap.
         }
       }}
     />
@@ -140,7 +144,8 @@ export const Select = <TOptions extends ReadonlyArray<string>>(
     <select
       value={value}
       onChange={(event) => {
-        // Cast the value of this event from `string` to our more narrow type
+        // Cast the value of this event from `string` to our more
+        // narrow type
         const newValue = event.currentTarget.value as TOptions[number];
         setValue(newValue);
         props.onChange(newValue);

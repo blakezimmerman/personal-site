@@ -13,7 +13,7 @@ export const educationItems: Education[] = [
     logoHref: "/images/stevens",
     degree: "Bachelors of Engineering",
     field: "Software Engineering",
-    timeline: "August 2014 - May 2019",
+    timeline: "Aug 2014 - May 2019 ・ Co-op Program",
     extracurriculars: [
       "President and Co-Founder of Software Engineering Club",
       "Technology Director for Duckhacks Hackathon",

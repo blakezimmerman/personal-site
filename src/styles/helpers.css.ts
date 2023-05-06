@@ -26,21 +26,21 @@ export const translucentSuface = style([
 export const mobileHeaderHeight = `calc(${spaces[16]} + ${spaces[16]} + ${fontSizes[24]})`;
 export const tabletHeaderHeight = `calc(${spaces[32]} + ${spaces[32]} + ${fontSizes[32]})`;
 
-export const paddingForHeader = style([
-  { paddingTop: mobileHeaderHeight },
+export const paddingForHeader = style(
   responsiveStyle({
+    mobile: { paddingTop: mobileHeaderHeight },
     tablet: { paddingTop: tabletHeaderHeight },
   }),
-]);
+);
 
-export const minFullHeightWithHeader = style([
-  {
-    minHeight: [
-      `calc(100vh - ${mobileHeaderHeight})`,
-      `calc(100svh - ${mobileHeaderHeight})`,
-    ],
-  },
+export const minFullHeightWithHeader = style(
   responsiveStyle({
+    mobile: {
+      minHeight: [
+        `calc(100vh - ${mobileHeaderHeight})`,
+        `calc(100svh - ${mobileHeaderHeight})`,
+      ],
+    },
     tablet: {
       minHeight: [
         `calc(100vh - ${tabletHeaderHeight})`,
@@ -48,4 +48,4 @@ export const minFullHeightWithHeader = style([
       ],
     },
   }),
-]);
+);

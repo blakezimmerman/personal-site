@@ -1,9 +1,7 @@
 {
   "editor.tabSize": 2,
   "editor.wordWrapColumn": 90,
-  "editor.rulers": [
-    90
-  ],
+  "editor.rulers": [90],
   "eslint.validate": [
     "astro",
     "javascript",
@@ -36,6 +34,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.wordWrap": "wordWrapColumn"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 75,
+    "editor.rulers": [75],
   },
 }

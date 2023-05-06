@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
+import { responsiveStyle } from "../../styles/responsiveStyle";
 import { sprinkles } from "../../styles/sprinkles.css";
 
 export const introContainer = style([
@@ -33,7 +34,8 @@ export const tagline = style([
     fontSize: [24, 32],
     marginTop: [12, 16],
   }),
-  {
-    maxWidth: "25ch",
-  },
+  responsiveStyle({
+    mobile: { maxWidth: "20ch" },
+    tablet: { maxWidth: "24ch" },
+  }),
 ]);

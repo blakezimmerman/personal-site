@@ -13,6 +13,7 @@ import {
   heading,
   postContentContainer,
   postDetails,
+  postFooter,
 } from "./BlogPost.css";
 
 export interface Props {
@@ -33,8 +34,10 @@ const { data, Content } = Astro.props;
     <div class:list={[postContentContainer, "markdown"]}>
       <Content />
     </div>
-    <div class={divider}></div>
-    <BlogAuthorDetails />
-    <a rel="prefetch" href="/blog">← Read more posts</a>
+    <div class={postFooter}>
+      <div class={divider}></div>
+      <BlogAuthorDetails />
+      <a rel="prefetch" href="/blog">← Read more posts</a>
+    </div>
   </div>
 </div>

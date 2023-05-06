@@ -11,7 +11,8 @@ export const blogEntryList = style([
   sprinkles({
     display: "flex",
     flexDirection: "column",
-    p: [24, 32],
+    px: [16, 32],
+    py: [24, 32],
     gap: [32, 48],
   }),
   {
@@ -34,7 +35,7 @@ export const postsList = style([
 
 export const heading = sprinkles({
   fontWeight: "bold",
-  fontSize: [24, 40],
+  fontSize: [24, 44],
   color: "textStrong",
 });
 
