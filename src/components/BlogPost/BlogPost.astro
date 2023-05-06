@@ -9,6 +9,7 @@ import BlogAuthorDetails from "../BlogAuthorDetails/BlogAuthorDetails.astro";
 import {
   blogPost,
   blogPostContainer,
+  blogPostHeader,
   divider,
   heading,
   postContentContainer,
@@ -26,10 +27,12 @@ const { data, Content } = Astro.props;
 
 <div class={blogPostContainer}>
   <div class={blogPost}>
-    <h1 class={heading}>{data.title}</h1>
-    <div class={postDetails}>
-      <div>by {data.author}</div>
-      <div>{formatDate(data.pubDate)}</div>
+    <div class={blogPostHeader}>
+      <h1 class={heading}>{data.title}</h1>
+      <div class={postDetails}>
+        <div>by {data.author}</div>
+        <div>{formatDate(data.pubDate)}</div>
+      </div>
     </div>
     <div class:list={[postContentContainer, "markdown"]}>
       <Content />

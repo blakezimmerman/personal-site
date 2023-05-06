@@ -33,11 +33,14 @@ export const postsList = style([
   },
 ]);
 
-export const heading = sprinkles({
-  fontWeight: "bold",
-  fontSize: [24, 44],
-  color: "textStrong",
-});
+export const heading = style([
+  sprinkles({
+    fontWeight: "bold",
+    fontSize: [24, 44],
+    color: "textStrong",
+  }),
+  { lineHeight: 1.25 },
+]);
 
 export const blogEntry = style([
   sprinkles({

@@ -20,21 +20,25 @@ export const blogPost = style([
   },
 ]);
 
+export const blogPostHeader = sprinkles({
+  display: "flex",
+  flexDirection: "column",
+  gap: [12, 16],
+  px: [16, 32],
+});
+
 export const heading = style([
   sprinkles({
     fontWeight: "bold",
     fontSize: [24, 44],
     color: "textStrong",
-    px: [16, 32],
   }),
-  {
-    lineHeight: 1.25,
-  },
+  { lineHeight: 1.25 },
 ]);
 
 export const postDetails = sprinkles({
   color: "textSubdued",
-  px: [16, 32],
+  fontSize: [14, 16],
 });
 
 export const postFooter = sprinkles({
