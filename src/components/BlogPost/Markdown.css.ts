@@ -4,7 +4,16 @@ import { responsiveStyle } from "../../styles/responsiveStyle";
 import { fontFamilies, fontSizes, fontWeights, radii, spaces } from "../../styles/scales";
 import { vars } from "../../styles/theme.css";
 
+/**
+ * Since the markdown content is converted to HTML during build time, we can't put class
+ * names on the individual elements of the document. Instead we'll put this class name on
+ * the outer container of the markdown document, and target inner elements with a global
+ * stylesheet.
+ */
 const m = ".markdown";
+
+// h1 is reserved for the post heading which is outside of the markdown content
+// h6 is not supported by the markdown parser that is being used
 const allHeadings = `${m} h2, ${m} h3, ${m} h4, ${m} h5`;
 
 globalStyle(
@@ -105,6 +114,37 @@ globalStyle(`${m} pre, ${m} code`, {
 });
 
 globalStyle(
+  `${m} blockquote`,
+  responsiveStyle({
+    mobile: {
+      display: "flex",
+      flexDirection: "column",
+      gap: spaces[12],
+      margin: 0,
+      backgroundColor: vars.colors.surface2,
+      padding: spaces[16],
+    },
+    tablet: {
+      borderRadius: radii[2],
+      margin: `0 ${spaces[16]}`,
+    },
+  }),
+);
+
+globalStyle(
+  `${m} blockquote > p`,
+  responsiveStyle({
+    mobile: {
+      padding: 0,
+      fontSize: fontSizes[14],
+    },
+    tablet: {
+      fontSize: fontSizes[16],
+    },
+  }),
+);
+
+globalStyle(
   `${m} pre`,
   responsiveStyle({
     mobile: {
@@ -122,6 +162,16 @@ globalStyle(
 globalStyle(`${m} p > code, ${m} li > code`, {
   color: vars.colors.textStrong,
   backgroundColor: vars.colors.surface3,
+  borderRadius: radii[2],
+  paddingTop: spaces[2],
+  paddingBottom: spaces[2],
+  paddingLeft: spaces[4],
+  paddingRight: spaces[4],
+});
+
+globalStyle(`${m} a > code`, {
+  color: vars.colors.link,
+  backgroundColor: vars.colors.linkBackground,
   borderRadius: radii[2],
   paddingTop: spaces[2],
   paddingBottom: spaces[2],

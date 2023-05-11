@@ -10,6 +10,13 @@ export const contactPointsContainer = sprinkles({
   gap: 32,
 });
 
+export const emailLink = sprinkles({
+  bg: "linkBackground",
+  px: 8,
+  py: 2,
+  borderRadius: 2,
+});
+
 export const socialPlatformsContainer = sprinkles({
   display: "flex",
   gap: 32,

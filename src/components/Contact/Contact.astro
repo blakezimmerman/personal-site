@@ -2,6 +2,7 @@
 import Section from "../../layouts/PageSection/PageSection.astro";
 import {
   contactPointsContainer,
+  emailLink,
   invertSocialIcon,
   socialIcon,
   socialPlatformsContainer,
@@ -10,7 +11,7 @@ import {
 
 <Section id="contact" heading="Contact">
   <div class={contactPointsContainer}>
-    <a href="mailto:blake.zimmerman@me.com">blake.zimmerman@me.com</a>
+    <a class={emailLink} href="mailto:blake.zimmerman@me.com">blake.zimmerman@me.com</a>
     <div class={socialPlatformsContainer}>
       <a
         href="https://www.linkedin.com/in/blake-zimmerman/"
