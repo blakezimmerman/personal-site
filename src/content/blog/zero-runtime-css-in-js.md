@@ -222,7 +222,7 @@ export const Component = () => {
   return <Greeting>Hello World</Greeting>;
 };
 
-const Greeting = styled`
+const Greeting = styled.div`
   padding: 16px;
   background-color: lightgray;
   color: black;
