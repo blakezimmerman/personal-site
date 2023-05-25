@@ -21,7 +21,7 @@ export const experienceItems: Experience[] = [
         department: "Culinary Technology",
         timeline: "Jun 2022 - Present",
         details: [
-          "Led development for an application that managed kitchen tasks and operations to scale Wonder's culinary manufacturing process and capture feedback to validate their R&D formulas.",
+          "Technical Lead for an application that managed kitchen tasks and operations to scale Wonder's culinary manufacturing process and capture feedback to validate their R&D formulas.",
         ],
       },
       {

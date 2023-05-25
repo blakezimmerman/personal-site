@@ -73,26 +73,26 @@ globalStyle(
   }),
 );
 
-globalStyle(`${m} p, ${m} ul`, {
+globalStyle(`${m} p, ${m} ul, ${m} ol`, {
   lineHeight: 1.75,
 });
 
 globalStyle(
-  `${m} p, ${m} ul`,
+  `${m} p, ${m} ul, ${m} ol`,
   responsiveStyle({
     mobile: { fontSize: fontSizes[16] },
     tablet: { fontSize: fontSizes[18] },
   }),
 );
 
-globalStyle(`${m} ul`, {
+globalStyle(`${m} ul, ${m} ol`, {
   display: "flex",
   flexDirection: "column",
   gap: spaces[8],
 });
 
 globalStyle(
-  `${m} ul`,
+  `${m} ul, ${m} ol`,
   responsiveStyle({
     mobile: {
       paddingLeft: spaces[32],
