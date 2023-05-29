@@ -27,16 +27,21 @@ const { blogEntries } = Astro.props;
     <BlogAuthorDetails />
     <div class={postsList}>
       {
-        blogEntries.map((entry) => (
-          <a rel="prefetch" class={blogEntry} href={`/blog/${entry.slug}`}>
-            <div class={title}>{entry.data.title}</div>
-            <div class={date}>{formatDate(entry.data.pubDate)}</div>
-            <div class={description}>
-              {entry.data.description ||
-                entry.body.split(" ").slice(0, 20).join(" ") + "..."}
-            </div>
-          </a>
-        ))
+        blogEntries.map(async (entry) => {
+          const { remarkPluginFrontmatter } = await entry.render();
+          return (
+            <a rel="prefetch" class={blogEntry} href={`/blog/${entry.slug}`}>
+              <div class={title}>{entry.data.title}</div>
+              <div class={date}>
+                {formatDate(entry.data.pubDate)} ・ {remarkPluginFrontmatter.readingTime}
+              </div>
+              <div class={description}>
+                {entry.data.description ||
+                  entry.body.split(" ").slice(0, 20).join(" ") + "..."}
+              </div>
+            </a>
+          );
+        })
       }
     </div>
   </div>

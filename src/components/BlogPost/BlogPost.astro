@@ -20,9 +20,10 @@ import {
 export interface Props {
   data: CollectionEntry<"blog">["data"];
   Content: AstroComponentFactory;
+  readingTime: string;
 }
 
-const { data, Content } = Astro.props;
+const { data, Content, readingTime } = Astro.props;
 ---
 
 <div class={blogPostContainer}>
@@ -31,7 +32,7 @@ const { data, Content } = Astro.props;
       <h1 class={heading}>{data.title}</h1>
       <div class={postDetails}>
         <div>by {data.author}</div>
-        <div>{formatDate(data.pubDate)}</div>
+        <div>{formatDate(data.pubDate)} ・ {readingTime}</div>
       </div>
     </div>
     <div class:list={[postContentContainer, "markdown"]}>

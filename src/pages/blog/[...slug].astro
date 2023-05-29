@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { entry } = Astro.props as Props;
-const { Content } = await entry.render();
+const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <Page
@@ -24,5 +24,9 @@ const { Content } = await entry.render();
   description={entry.data.description}
   keywords={`${entry.data.tags.join(", ")}, blog, Blake Zimmerman`}
 >
-  <BlogPost data={entry.data} Content={Content} />
+  <BlogPost
+    data={entry.data}
+    Content={Content}
+    readingTime={remarkPluginFrontmatter.readingTime}
+  />
 </Page>
