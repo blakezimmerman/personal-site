@@ -21,7 +21,7 @@ export const experienceItems: Experience[] = [
         department: "Culinary Technology",
         timeline: "Jun 2022 - Present",
         details: [
-          "Technical Lead for an application that managed kitchen tasks and operations to scale Wonder's culinary manufacturing process and capture feedback to validate their R&D formulas.",
+          "Technical Lead for an application that managed kitchen tasks and operations to scale Wonder's culinary manufacturing process and capture feedback to validate their R&D recipes.",
         ],
       },
       {
@@ -31,7 +31,7 @@ export const experienceItems: Experience[] = [
         details: [
           "Led front-end development for a tier 1 web application and implemented large features that improved the efficiency and accuracy of our food preparation process.",
           "Architected and developed a constraint-based design system containing shared React components and platform-agnostic design tokens.",
-          "Created a front-end template repo and published internal NPM packages that encouraged uniform best practices and design patterns across our 8 application teams.",
+          "Created a front-end template repo and published internal NPM packages that encouraged uniform best practices and design patterns across 8 of our application teams.",
         ],
       },
     ],
