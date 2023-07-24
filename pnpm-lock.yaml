@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@astrojs/partytown':
     specifier: ^1.2.3
@@ -8,8 +12,8 @@ dependencies:
     specifier: ^0.3.0
     version: 0.3.0
   '@astrojs/sitemap':
-    specifier: ^1.4.0
-    version: 1.4.0
+    specifier: ^2.0.1
+    version: 2.0.1
   '@vanilla-extract/css':
     specifier: ^1.12.0
     version: 1.12.0
@@ -147,8 +151,8 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/sitemap@1.4.0:
-    resolution: {integrity: sha512-uTK77kcg7iTiik+u7rTGG6vK4ZWTfYMaVnFndOVQrLzaE5xivmQgIbVLtlN+xRcME5n/m6vYQFJmogFR+elGCw==}
+  /@astrojs/sitemap@2.0.1:
+    resolution: {integrity: sha512-unoaSEyHuR8IApsPN467SD5FMm4PBnaQSHbtvt4dVS3PMDObZV5/lKIbjlfSad7ENzuvpBSLCGyLDOykXUNu6w==}
     dependencies:
       sitemap: 7.1.1
       zod: 3.21.4
@@ -5039,7 +5043,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
