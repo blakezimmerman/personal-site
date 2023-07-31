@@ -18,7 +18,7 @@
     "@astrojs/sitemap": "^1.4.0",
     "@vanilla-extract/css": "^1.12.0",
     "@vanilla-extract/sprinkles": "^1.6.1",
-    "astro": "^2.8.3",
+    "astro": "^2.9.6",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0"
   },
