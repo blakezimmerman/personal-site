@@ -1,6 +1,9 @@
+import { invertColorsWhenLight } from "../styles/helpers.css";
+
 export interface Experience {
   companyName: string;
   logoHref: string;
+  logoClassName?: string;
   roles: ExperienceRole[];
 }
 
@@ -13,13 +16,26 @@ export interface ExperienceRole {
 
 export const experienceItems: Experience[] = [
   {
+    companyName: "Aptos Labs",
+    logoHref: "/images/aptos",
+    logoClassName: invertColorsWhenLight,
+    roles: [
+      {
+        title: "Front End Engineer",
+        department: "Ecosystem",
+        timeline: "Aug 2023 - Present",
+        details: ["Currently building exciting web3 experiences."]
+      }
+    ]
+  },
+  {
     companyName: "Wonder",
     logoHref: "/images/wonder",
     roles: [
       {
         title: "Senior Software Engineer II",
         department: "Culinary Technology",
-        timeline: "Jun 2022 - Present",
+        timeline: "Jun 2022 - Aug 2023",
         details: [
           "Technical Lead for an application that managed kitchen tasks and operations to scale Wonder's culinary manufacturing process and capture feedback to validate their R&D recipes.",
         ],

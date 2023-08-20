@@ -1,4 +1,5 @@
 ---
+import clsx from "clsx";
 import { experienceItems } from "../../data/experience";
 import Section from "../../layouts/PageSection/PageSection.astro";
 import {
@@ -21,7 +22,7 @@ import {
           <source type="image/webp" srcset={`${experience.logoHref}.webp`} />
           <source type="image/png" srcset={`${experience.logoHref}.png`} />
           <img
-            class={companyLogo}
+            class={clsx(companyLogo, experience.logoClassName)}
             src={`${experience.logoHref}.png`}
             alt={`${experience.companyName} logo`}
           />
