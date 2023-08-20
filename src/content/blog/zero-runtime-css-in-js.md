@@ -767,6 +767,10 @@ Defining an exhaustive collection of CSS utility classes is an incredibly tediou
 [Sprinkles](https://vanilla-extract.style/documentation/packages/sprinkles/) allows you to generate a static set of custom CSS utility classes that can compose either statically at build-time or dynamically at runtime. To get started, first install the `@vanilla-extract/sprinkles` package. Then create a `sprinkles.css.ts` file somewhere in your project and start defining your Sprinkles config:
 
 ```ts
+import {
+  createSprinkles,
+  defineProperties
+} from "@vanilla-extract/sprinkles";
 import { vars } from "./theme.css";
 
 const breakpoints = {
