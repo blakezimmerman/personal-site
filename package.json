@@ -15,25 +15,25 @@
   "dependencies": {
     "@astrojs/partytown": "^1.2.3",
     "@astrojs/prefetch": "^0.3.0",
-    "@astrojs/sitemap": "^1.4.0",
+    "@astrojs/sitemap": "^2.0.2",
     "@vanilla-extract/css": "^1.12.0",
     "@vanilla-extract/sprinkles": "^1.6.1",
-    "astro": "^2.8.3",
+    "astro": "^2.10.12",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
-    "@typescript-eslint/parser": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
     "@vanilla-extract/vite-plugin": "^3.8.2",
-    "eslint": "^8.45.0",
-    "eslint-plugin-astro": "^0.27.2",
-    "eslint-plugin-import": "^2.27.5",
+    "eslint": "^8.47.0",
+    "eslint-plugin-astro": "^0.28.0",
+    "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "prettier": "^3.0.0",
-    "prettier-plugin-astro": "^0.11.0",
+    "prettier": "^3.0.2",
+    "prettier-plugin-astro": "^0.11.1",
     "typescript": "^5.1.6",
-    "vite": "^4.4.4"
+    "vite": "^4.4.9"
   }
 }
