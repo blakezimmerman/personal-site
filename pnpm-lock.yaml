@@ -15,11 +15,11 @@ dependencies:
     specifier: ^2.0.2
     version: 2.0.2
   '@vanilla-extract/css':
-    specifier: ^1.12.0
-    version: 1.12.0
+    specifier: ^1.13.0
+    version: 1.13.0
   '@vanilla-extract/sprinkles':
     specifier: ^1.6.1
-    version: 1.6.1(@vanilla-extract/css@1.12.0)
+    version: 1.6.1(@vanilla-extract/css@1.13.0)
   astro:
     specifier: ^2.10.12
     version: 2.10.12
@@ -1403,8 +1403,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vanilla-extract/css@1.12.0:
-    resolution: {integrity: sha512-TEttZfnqTRtwgVYiBWQSGGUiVaYWReHp59DsavITEvh4TpJNifZFGhBznHx4wQFEsyio6xA513jps4tmqR6zmw==}
+  /@vanilla-extract/css@1.13.0:
+    resolution: {integrity: sha512-JFFBXhnJrPlGqHBabagXqo5ghXw9mtV270ycIGyLDZG8NAK5eRwAYkMowAxuzK7wZSm67GnETWYB7b0AUmyttg==}
     dependencies:
       '@emotion/hash': 0.9.0
       '@vanilla-extract/private': 1.0.3
@@ -1424,7 +1424,7 @@ packages:
       '@babel/core': 7.22.9
       '@babel/plugin-syntax-typescript': 7.20.0(@babel/core@7.22.9)
       '@vanilla-extract/babel-plugin-debug-ids': 1.0.1
-      '@vanilla-extract/css': 1.12.0
+      '@vanilla-extract/css': 1.13.0
       esbuild: 0.16.17
       eval: 0.1.6
       find-up: 5.0.0
@@ -1439,12 +1439,12 @@ packages:
   /@vanilla-extract/private@1.0.3:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
 
-  /@vanilla-extract/sprinkles@1.6.1(@vanilla-extract/css@1.12.0):
+  /@vanilla-extract/sprinkles@1.6.1(@vanilla-extract/css@1.13.0):
     resolution: {integrity: sha512-N/RGKwGAAidBupZ436RpuweRQHEFGU+mvAqBo8PRMAjJEmHoPDttV8RObaMLrJHWLqvX+XUMinHUnD0hFRQISw==}
     peerDependencies:
       '@vanilla-extract/css': ^1.0.0
     dependencies:
-      '@vanilla-extract/css': 1.12.0
+      '@vanilla-extract/css': 1.13.0
     dev: false
 
   /@vanilla-extract/vite-plugin@3.8.2(vite@4.4.9):

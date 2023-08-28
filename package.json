@@ -16,7 +16,7 @@
     "@astrojs/partytown": "^1.2.3",
     "@astrojs/prefetch": "^0.3.0",
     "@astrojs/sitemap": "^2.0.2",
-    "@vanilla-extract/css": "^1.12.0",
+    "@vanilla-extract/css": "^1.13.0",
     "@vanilla-extract/sprinkles": "^1.6.1",
     "astro": "^2.10.12",
     "clsx": "^2.0.0",
