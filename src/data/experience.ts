@@ -24,9 +24,9 @@ export const experienceItems: Experience[] = [
         title: "Front End Engineer",
         department: "Ecosystem",
         timeline: "Aug 2023 - Present",
-        details: ["Currently building exciting web3 experiences."]
-      }
-    ]
+        details: ["Currently building exciting web3 experiences."],
+      },
+    ],
   },
   {
     companyName: "Wonder",

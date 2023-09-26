@@ -52,9 +52,9 @@ export const minFullHeightWithHeader = style(
 
 export const invertColorsWhenLight = style({
   filter: "invert(1)",
-  '@media': {
-    '(prefers-color-scheme: dark)': {
-      filter: "unset"
-    }
-  }
-})
+  "@media": {
+    "(prefers-color-scheme: dark)": {
+      filter: "unset",
+    },
+  },
+});
