@@ -1,0 +1,36 @@
+---
+import Moon from "../Vectors/Moon.astro";
+import Sun from "../Vectors/Sun.astro";
+import { moonIcon, sunIcon, themeToggle } from "./ThemeToggle.css";
+---
+
+<button aria-label="Toggle Theme" class={themeToggle}>
+  <Sun className={sunIcon} ariaHidden={true} />
+  <Moon className={moonIcon} ariaHidden={true} />
+</button>
+
+<script>
+  const button = document.querySelector("[aria-label='Toggle Theme']");
+
+  button?.addEventListener("click", () => {
+    // Get current color scheme and toggle it
+    const storedScheme = window.sessionStorage.getItem("color-scheme");
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const currentScheme = storedScheme ?? (mql.matches ? "dark" : "light");
+    const newScheme = currentScheme === "light" ? "dark" : "light";
+
+    button.setAttribute("data-color-scheme", newScheme);
+    window.sessionStorage.setItem("color-scheme", newScheme);
+
+    // Storage events don't normally fire in the same tab so let's fire our own
+    const e = new StorageEvent("storage", {
+      storageArea: window.sessionStorage,
+      key: "color-scheme",
+      oldValue: currentScheme,
+      newValue: newScheme,
+      url: window.location.href,
+    });
+    window.dispatchEvent(e);
+  });
+</script>

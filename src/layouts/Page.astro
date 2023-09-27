@@ -92,12 +92,26 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
   }
 
   // Apply initial color scheme
+  const storedScheme = window.sessionStorage.getItem("color-scheme");
   const mql = window.matchMedia("(prefers-color-scheme: dark)");
-  applyColorScheme(mql.matches ? "dark" : "light");
+  const colorScheme = storedScheme ?? (mql.matches ? "dark" : "light");
+  applyColorScheme(colorScheme);
 
-  // Listen for color scheme changes
+  // Set initial color scheme on ThemeToggle button
+  const themeToggle = document.querySelector("[aria-label='Toggle Theme']");
+  if (themeToggle) themeToggle.setAttribute("data-color-scheme", colorScheme);
+
+  // Listen for color scheme changes from media query
   mql.addEventListener("change", (e) => {
     const newColorScheme = e.matches ? "dark" : "light";
+    window.sessionStorage.removeItem("color-scheme");
     applyColorScheme(newColorScheme);
+  });
+
+  // Listen for color scheme changes from session storage
+  window.addEventListener("storage", (e) => {
+    if (e.key === "color-scheme") {
+      applyColorScheme(e.newValue);
+    }
   });
 </script>

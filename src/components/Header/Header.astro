@@ -1,4 +1,5 @@
 ---
+import ThemeToggle from "../ThemeToggle/ThemeToggle.astro";
 import Logo from "../Vectors/Logo.astro";
 import { header, logo, nav, navItem } from "./Header.css";
 ---
@@ -7,9 +8,12 @@ import { header, logo, nav, navItem } from "./Header.css";
   <a rel="prefetch" class={navItem} href="/" aria-label="Home">
     <Logo className={logo} />
   </a>
-  <nav class={nav}>
-    <a class={navItem} href="/#about-me">About Me</a>
-    <a class={navItem} href="/#contact">Contact</a>
-    <a rel="prefetch" class={navItem} href="/blog">Blog</a>
-  </nav>
+  <div class={nav}>
+    <nav class={nav}>
+      <a class={navItem} href="/#about-me">About Me</a>
+      <a class={navItem} href="/#contact">Contact</a>
+      <a rel="prefetch" class={navItem} href="/blog">Blog</a>
+    </nav>
+    <ThemeToggle />
+  </div>
 </header>
