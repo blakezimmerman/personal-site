@@ -23,7 +23,7 @@ export const sunIcon = style([
   themeIcon,
   {
     selectors: {
-      "button[data-color-scheme='light'] > &": {
+      "button[data-color-scheme='dark'] > &": {
         opacity: 0,
         transform: "rotate(-90deg)",
       },
@@ -35,7 +35,7 @@ export const moonIcon = style([
   themeIcon,
   {
     selectors: {
-      "button[data-color-scheme='dark'] > &": {
+      "button[data-color-scheme='light'] > &": {
         opacity: 0,
         transform: "rotate(90deg)",
       },
