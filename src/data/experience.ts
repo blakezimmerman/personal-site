@@ -21,10 +21,16 @@ export const experienceItems: Experience[] = [
     logoClassName: invertColorsWhenLight,
     roles: [
       {
-        title: "Front End Engineer",
+        title: "Senior Front End Engineer",
         department: "Ecosystem",
         timeline: "Aug 2023 - Present",
-        details: ["Currently building exciting web3 experiences."],
+        details: [
+          "Founding engineer on Decibel, an onchain perpetual futures DEX on Aptos — took from zero to mainnet in under a year; owned the Next.js trading UI and @decibeltrade/sdk (TypeScript SDK). $4.6B+ cumulative volume, 260K+ users, 59 markets, ~$57M peak TVL in the first ~5 months post-launch.",
+          "Architected and shipped Aptos' design system — a library of 30+ React components and utilities that unified UI across Aptos Labs' product suite and materially accelerated front-end delivery across teams.",
+          "Built Geomi from scratch (Aptos' developer platform) — a Next.js app for full-node API keys, no-code indexing, and gas station (sponsored transactions), backed by a tRPC BFF I designed to unify multiple upstream microservices behind a single front-end API; onboarded additional engineers to own new feature areas as scope grew.",
+          "Built Graffio from zero to one, a real-time collaborative drawing app backed by onchain state — architected and shipped the front-end for the one-day anniversary event that drew 330K users with zero major outages.",
+          'Wrote and contributed a suite of headless components to @aptos-labs/wallet-adapter-react, making it easy for internal and ecosystem projects to integrate the Aptos wallet adapter with their own custom styling; authored the public "Build Your Own Wallet Selector" guide.',
+        ],
       },
     ],
   },
@@ -47,7 +53,7 @@ export const experienceItems: Experience[] = [
         details: [
           "Led front-end development for a tier 1 web application and implemented large features that improved the efficiency and accuracy of our food preparation process.",
           "Architected and developed a constraint-based design system containing shared React components and platform-agnostic design tokens.",
-          "Created a front-end template repo and published internal NPM packages that encouraged uniform best practices and design patterns across 8 of our application teams.",
+          "Established the frontend engineering standard by creating a reusable application template and publishing shared internal NPM packages adopted across eight application teams.",
         ],
       },
     ],
@@ -62,7 +68,7 @@ export const experienceItems: Experience[] = [
         timeline: "Oct 2020 - Jun 2022 ・ Freelance",
         details: [
           "Integrated Stripe into the web application to enable payments by ACH debits and credit cards.",
-          "Migrated the entire codebase from JavaScript to TypeScript to reduce bugs and improve maintainability.",
+          "Led migration of the production JavaScript application to TypeScript, improving maintainability and reducing runtime defects.",
           "Consulted on technical design choices and implemented various key features.",
         ],
       },
